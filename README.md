@@ -14,8 +14,7 @@ library(dplyr)   ## for wrangling
 ###  data wrangling
 
 date_wise<- coronavirus  %>% select(type,date,cases,country) %>%  
-                                  group_by(country,type,date) %>% 
-                                  
+                                  group_by(country,type,date) %>%                                   
                                   summarise(Pop_cases=sum(cases))
 
 #### Animation ggplot and save it to your directory 
