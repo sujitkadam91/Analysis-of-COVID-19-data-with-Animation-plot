@@ -31,6 +31,6 @@ date_wise %>% ggplot(aes(x=date, y=Pop_cases, group=type, color=type,fill=type))
                      transition_reveal(date)
                     
 
-#### Save at gif:
+#### Save as gif:
 
 anim_save("corona_Animate_plot0.gif")
