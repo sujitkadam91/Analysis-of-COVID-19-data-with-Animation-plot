@@ -14,27 +14,20 @@ library(dplyr)   ## for wrangling
 ###  data wrangling
 
 date_wise<- coronavirus  %>% select(type,date,cases,country) %>%  
-
                                   group_by(country,type,date) %>% 
                                   
                                   summarise(Pop_cases=sum(cases))
 
 #### Animation ggplot and save it to your directory 
 
-date_wise %>% ggplot(aes(x=date, y=Pop_cases, group=type, color=type,fill=type)) +
 
-                     geom_line() + geom_point()+ geom_area()+
-                     
-                     ggtitle("Covid19 cases update") +
-                     
-                     theme_bw() +
-                     
-                     ylab("Number of cases per day") +
-                     
-                     scale_x_date(date_breaks = "10 day")+
-                     
-                     theme(axis.text.x = element_text(angle = 40, hjust = 1))+
-                     
+date_wise %>% ggplot(aes(x=date, y=Pop_cases, group=type, color=type,fill=type)) +
+                     geom_line() + geom_point()+ geom_area()+                     
+                     ggtitle("Covid19 cases update") +                     
+                     theme_bw() +                     
+                     ylab("Number of cases per day") +                     
+                     scale_x_date(date_breaks = "10 day")+                     
+                     theme(axis.text.x = element_text(angle = 40, hjust = 1))+                     
                      transition_reveal(date)
                     
 
