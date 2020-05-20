@@ -9,7 +9,7 @@ tail(coronavirus) ## check last update date of data
 
 library(ggplot2) ## for ploting 
 
-library(dplyr)   ## for wrangling
+library(dplyr)   ## for data wrangling
 
 ###  data wrangling
 
