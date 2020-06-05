@@ -11,6 +11,8 @@ library(ggplot2) ## for ploting
 
 library(dplyr)   ## for data wrangling
 
+library(animation) ## for animatiom
+
 ###  data wrangling
 
 date_wise<- coronavirus  %>% select(type,date,cases,country) %>%  
