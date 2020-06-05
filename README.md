@@ -11,7 +11,7 @@ library(ggplot2) ## for ploting
 
 library(dplyr)   ## for data wrangling
 
-library(animation) ## for animatiom
+library(gganimate) ## for animatiom
 
 ###  data wrangling
 
